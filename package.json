@@ -11,11 +11,8 @@
     "spell-check",
     "linter-spell"
   ],
-  "activationCommands": {
-    "atom-workspace": "linter-spell-rst:toggle"
-  },
   "activationHooks": [
-    "language-reStructuredText:grammar-used"
+    "language-restructuredtext:grammar-used"
   ],
   "standard": {
     "parser": "babel-eslint",
