@@ -1,75 +1,75 @@
 {
-    "name": "linter-spell-rst",
-    "main": "./lib/main",
-    "version": "0.1.0",
-    "description": "restructuredText spell checking using linter-spell (beta)",
-    "author": "Alexandre Voiney <pro@alexandre.voiney.fr>",
-    "keywords": [
-        "rst",
-        "reStructuredText",
-        "linter",
-        "spell-check",
-        "linter-spell"
-    ],
-    "activationCommands": {
-        "atom-workspace": "linter-spell-rst:toggle"
+  "name": "linter-spell-rst",
+  "main": "./lib/main",
+  "version": "0.2.0",
+  "description": "restructuredText spell checking using linter-spell (beta)",
+  "author": "Alexandre Voiney <pro@alexandre.voiney.fr>",
+  "keywords": [
+    "rst",
+    "reStructuredText",
+    "linter",
+    "spell-check",
+    "linter-spell"
+  ],
+  "activationCommands": {
+    "atom-workspace": "linter-spell-rst:toggle"
+  },
+  "activationHooks": [
+    "language-reStructuredText:grammar-used"
+  ],
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "atom",
+      "latex",
+      "afterEach",
+      "beforeEach",
+      "describe",
+      "expect",
+      "it",
+      "jasmine",
+      "runs",
+      "spyOn",
+      "waitsFor",
+      "waitsForPromise"
+    ]
+  },
+  "repository": "https://github.com/avoiney/linter-spell-rst",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "atom-package-deps": "^4.4.1",
+    "linter-spell-word-list": "^0.5.0"
+  },
+  "devDependecies": {
+    "semver": "^5.3.0"
+  },
+  "package-deps": [
+    "linter-spell",
+    "language-reStructuredText"
+  ],
+  "providedServices": {
+    "linter-spell-grammar": {
+      "versions": {
+        "1.0.0": "provideGrammar"
+      }
     },
-    "activationHooks": [
-        "language-reStructuredText:grammar-used"
-    ],
-    "standard": {
-        "parser": "babel-eslint",
-        "globals": [
-            "atom",
-            "latex",
-            "afterEach",
-            "beforeEach",
-            "describe",
-            "expect",
-            "it",
-            "jasmine",
-            "runs",
-            "spyOn",
-            "waitsFor",
-            "waitsForPromise"
-        ]
-    },
-    "repository": "https://github.com/avoiney/linter-spell-rst",
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.0.0"
-    },
-    "dependencies": {
-        "lodash": "^4.17.4",
-        "atom-package-deps": "^4.4.1",
-        "linter-spell-word-list": "^0.5.0"
-    },
-    "devDependecies": {
-        "semver": "^5.3.0"
-    },
-    "package-deps": [
-        "linter-spell",
-        "language-reStructuredText"
-    ],
-    "providedServices": {
-        "linter-spell-grammar": {
-            "versions": {
-                "1.0.0": "provideGrammar"
-            }
-        },
-        "linter-spell-dictionary": {
-            "versions": {
-                "1.0.0": "provideDictionary"
-            }
-        }
-    },
-    "configSchema": {
-        "words": {
-            "title": "restructuredText Words",
-            "description": "restructuredText specific word list. Precede word with '!' to make word case sensitive.",
-            "type": "array",
-            "default": [],
-            "order": 1
-        }
+    "linter-spell-dictionary": {
+      "versions": {
+        "1.0.0": "provideDictionary"
+      }
     }
+  },
+  "configSchema": {
+    "words": {
+      "title": "restructuredText Words",
+      "description": "restructuredText specific word list. Precede word with '!' to make word case sensitive.",
+      "type": "array",
+      "default": [],
+      "order": 1
+    }
+  }
 }
