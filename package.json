@@ -1,7 +1,7 @@
 {
   "name": "linter-spell-rst",
   "main": "./lib/main",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "restructuredText spell checking using linter-spell (beta)",
   "author": "Alexandre Voiney <pro@alexandre.voiney.fr>",
   "keywords": [
